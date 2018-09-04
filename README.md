@@ -49,7 +49,7 @@ Silhouette: [s1,...,sk,stotal]
 where ```x``` the chosen Initialization method (1 or 2), ```y``` the chosen Assignment method (1 or 2), ```z``` the chosen Update method (1 or 2)
 
 ### Output file (-complete)
-If the user choose ```-complete``` flag then more information become available which are:
+If the user choose ```-complete``` flag then more information become available about the clusters:
 ```
 CLUSTER-1 {curve_idA, curve_idB, ..., curve_idC}
 CLUSTER-2 {curve_idA, curve_idB, ..., curve_idC}
@@ -57,7 +57,10 @@ CLUSTER-2 {curve_idA, curve_idB, ..., curve_idC}
 CLUSTER-k {curve_idR, curve_idT, ..., curve_idZ}
 ```
 
-### Evaluation
+### Evaluation (Silhouette)
+Silhouette refers to a method of interpretation and validation of consistency within clusters of data. The technique provides a succinct graphical representation of how well each object lies within its cluster.
+The silhouette value is a measure of how similar an object is to its own cluster (cohesion) compared to other clusters (separation). The silhouette ranges from −1 to +1, where a high value indicates that the object is well matched to its own cluster and poorly matched to neighboring clusters. If most objects have a high value, then the clustering configuration is appropriate. If many points have a low or negative value, then the clustering configuration may have too many or too few clusters.
+
 
 ## Compile
 
