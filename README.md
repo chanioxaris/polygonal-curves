@@ -1,5 +1,15 @@
 ## Overview
+This is an implementation of clustering algorithms for polygonal curves. User can choose between the below methods:
 
+#### Initialization
+1. K-means++
+2. Random selection of k-points - (Simplest)
+#### Assignment
+1. Lloyd’s assignment - (Simplest)
+2. Assignment by Range search (LSH)
+#### Update
+1. Mean Discrete Frechet curve
+2. Partitioning Around Medoids (PAM) – (Improved)
 
 ## Input data files
 
@@ -22,6 +32,32 @@ number_of_clusters: <int>
 number_of_grid_curves: <int> 
 number_of_hash_tables: <int>
 ```
+
+## Output data files
+
+### Output file 
+The format of output text file, described by the following structure:
+```
+Algorithm: Ι<x>A<y>U<z>
+Metric: Frechet or DTW
+CLUSTER-1 {size: <int>, centroid: <curve_id>}
+...
+CLUSTER-k {size: <int>, centroid: <curve_id>}
+clustering_time: <double> 
+Silhouette: [s1,...,sk,stotal]
+```
+where ```x``` the chosen Initialization method (1 or 2), ```y``` the chosen Assignment method (1 or 2), ```z``` the chosen Update method (1 or 2)
+
+### Output file (-complete)
+If the user choose ```-complete``` flag then more information become available which are:
+```
+CLUSTER-1 {curve_idA, curve_idB, ..., curve_idC}
+CLUSTER-2 {curve_idA, curve_idB, ..., curve_idC}
+...
+CLUSTER-k {curve_idR, curve_idT, ..., curve_idZ}
+```
+
+### Evaluation
 
 ## Compile
 
