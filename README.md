@@ -62,7 +62,7 @@ Silhouette refers to a method of interpretation and validation of consistency wi
 The silhouette value is a measure of how similar an object is to its own cluster (cohesion) compared to other clusters (separation). The silhouette ranges from −1 to +1, where a high value indicates that the object is well matched to its own cluster and poorly matched to neighboring clusters. If most objects have a high value, then the clustering configuration is appropriate. If many points have a low or negative value, then the clustering configuration may have too many or too few clusters.
 
 
-![Silhouette](https://github.com/chanioxaris/Kmeans-Kmedois-PolygonalCurves/blob/master/img/silhouette.jpg)
+![Silhouette](https://github.com/chanioxaris/polygonal-curves/blob/master/img/silhouette.jpg)
 
 
 ## Compile
